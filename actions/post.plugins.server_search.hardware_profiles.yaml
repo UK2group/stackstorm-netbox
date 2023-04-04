@@ -1,0 +1,32 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 3.4
+description: "POST Hardware Profile"
+enabled: true
+entry_point: run.py
+name: post.plugins.server_search.hardware_profiles
+parameters:
+  endpoint_uri:
+    default: "/plugins/server_search/hardware-profiles/"
+    immutable: true
+    type: string
+  http_verb:
+    default: post
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  device:
+    required: true
+    type: integer
+    description: "Device"
+  raw_profile:
+    required: true
+    type: object
+    description: "Raw hardware profile"
+  parsed_profile:
+    required: true
+    type: object
+    description: "Parsed hardware profile"
+runner_type: python-script
