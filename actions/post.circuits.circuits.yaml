@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.4
-description: "POST Circuits"
+# NetBox API version: 3.7
+description: "Post a list of circuit objects."
 enabled: true
 entry_point: run.py
 name: post.circuits.circuits
@@ -18,21 +18,30 @@ parameters:
     immutable: true
     type: boolean
   cid:
-    required: true
+    required: false
     type: string
     description: "Circuit ID"
   provider:
-    required: true
+    required: false
     type: integer
     description: "Provider"
+  provider_account:
+    required: false
+    type: integer
+    description: "Provider account"
   type:
-    required: true
+    required: false
     type: integer
     description: "Type"
   status:
     required: false
     type: string
-    description: "Status"
+    description: "* `planned` - Planned
+* `provisioning` - Provisioning
+* `active` - Active
+* `offline` - Offline
+* `deprovisioning` - Deprovisioning
+* `decommissioned` - Decommissioned"
   tenant:
     required: false
     type: integer

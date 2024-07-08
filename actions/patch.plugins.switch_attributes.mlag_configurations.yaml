@@ -1,0 +1,52 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 3.7
+description: "Patch a MLAG Configuration object."
+enabled: true
+entry_point: run.py
+name: patch.plugins.switch_attributes.mlag_configurations
+parameters:
+  endpoint_uri:
+    default: "/plugins/switch-attributes/mlag-configurations/{{ id }}/"
+    immutable: true
+    type: string
+  http_verb:
+    default: patch
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  device:
+    required: false
+    type: integer
+    description: "Device"
+  switch_attributes:
+    required: false
+    type: integer
+    description: "Select the Device for which this MLAG configuration will be attached."
+  systemmac:
+    required: false
+    type: integer
+    description: "System MAC"
+  peerlink:
+    required: false
+    type: integer
+    description: "Peerlink Interface for the MLAG pair."
+  backup_address:
+    required: false
+    type: integer
+    description: "Backup IP Address"
+  peer_address:
+    required: false
+    type: integer
+    description: "Peer IP Address of the Neighbor switch."
+  peer_device:
+    required: false
+    type: integer
+    description: "Peer Device of the Switch"
+  id:
+    required: true
+    type: integer
+    description: "ID of the object to patch."
+runner_type: python-script

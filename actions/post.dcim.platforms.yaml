@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.4
-description: "POST Platforms"
+# NetBox API version: 3.7
+description: "Post a list of platform objects."
 enabled: true
 entry_point: run.py
 name: post.dcim.platforms
@@ -18,25 +18,21 @@ parameters:
     immutable: true
     type: boolean
   name:
-    required: true
+    required: false
     type: string
     description: "Name"
   slug:
-    required: true
+    required: false
     type: string
     description: "Slug"
   manufacturer:
     required: false
     type: integer
-    description: "Manufacturer"
-  napalm_driver:
+    description: "Optionally limit this platform to devices of a certain manufacturer"
+  config_template:
     required: false
-    type: string
-    description: "NAPALM driver"
-  napalm_args:
-    required: false
-    type: object
-    description: "NAPALM arguments"
+    type: integer
+    description: "Config template"
   description:
     required: false
     type: string
