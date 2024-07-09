@@ -73,9 +73,8 @@ class NetboxBaseAction(Action):
             )
 
         if r:
-            try:
-                raw = r.json()
-            except ValueError:
-                raw = r.text
-            return {"raw": raw, "status": r.status_code}
+            if r.status_code == 204:
+                return {"status": r.status_code}
+            else:
+                return {"raw": r.json(), "status": r.status_code}
         return {"raw": {}, "status": 404}
