@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.4
-description: "POST Config Contexts"
+# NetBox API version: 3.7
+description: "Post a list of config context objects."
 enabled: true
 entry_point: run.py
 name: post.extras.config_contexts
@@ -18,7 +18,7 @@ parameters:
     immutable: true
     type: boolean
   name:
-    required: true
+    required: false
     type: string
     description: "Name"
   weight:
@@ -85,8 +85,12 @@ parameters:
     required: false
     type: array
     description: "Array of tag strings"
+  data_source:
+    required: false
+    type: integer
+    description: "Remote data source"
   data:
-    required: true
+    required: false
     type: object
     description: "Data"
 runner_type: python-script

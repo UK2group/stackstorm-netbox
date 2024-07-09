@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.4
-description: "PATCH Providers"
+# NetBox API version: 3.7
+description: "Patch a provider object."
 enabled: true
 entry_point: run.py
 name: patch.circuits.providers
@@ -20,15 +20,15 @@ parameters:
   name:
     required: false
     type: string
-    description: "Name"
+    description: "Full name of the provider"
   slug:
     required: false
     type: string
     description: "Slug"
-  account:
+  accounts:
     required: false
-    type: string
-    description: "Account number"
+    type: array
+    description: "Accounts"
   description:
     required: false
     type: string
@@ -51,6 +51,6 @@ parameters:
     description: "Custom fields"
   id:
     required: true
-    type: string
+    type: integer
     description: "ID of the object to patch."
 runner_type: python-script

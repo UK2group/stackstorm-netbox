@@ -1,0 +1,36 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 3.7
+description: "Patch a LAG Identifier object."
+enabled: true
+entry_point: run.py
+name: patch.plugins.switch_attributes.lag_identifiers
+parameters:
+  endpoint_uri:
+    default: "/plugins/switch-attributes/lag-identifiers/{{ id }}/"
+    immutable: true
+    type: string
+  http_verb:
+    default: patch
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  device:
+    required: false
+    type: integer
+    description: "Device"
+  interface:
+    required: false
+    type: integer
+    description: "LAG Interface"
+  identifier:
+    required: false
+    type: integer
+    description: "Identifier"
+  id:
+    required: true
+    type: integer
+    description: "ID of the object to patch."
+runner_type: python-script

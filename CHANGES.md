@@ -1,8 +1,32 @@
 # Change Log
 
+## 3.4.1
+
+- Updated spec as per v3.7.3
+
+## 3.4.0
+
+- Updated spec as per v3.7.1
+
+## 3.3.0
+
+- Updated spec as per v3.6.9
+
+## 3.2.0
+
+- Update spec as per v3.5.9
+
 ## 3.1.0
 
-- Updated spec to Netbox v3.4.5
+- Updated spec as per v3.4.7
+
+## 3.0.7
+
+- Add @abhi1693 as code owner.
+
+## 3.0.6
+
+- Add exceptions on action.py
 
 ## 3.0.5
 
@@ -82,4 +106,3 @@
 
 ## 0.1.0
 - First release
-

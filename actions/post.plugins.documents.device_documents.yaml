@@ -1,0 +1,57 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 3.7
+description: "Post a list of Device Document objects."
+enabled: true
+entry_point: run.py
+name: post.plugins.documents.device_documents
+parameters:
+  endpoint_uri:
+    default: "/plugins/documents/device-documents/"
+    immutable: true
+    type: string
+  http_verb:
+    default: post
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  name:
+    required: false
+    type: string
+    description: "(Optional) Specify a name to display for this document. If no name is specified, the filename will be used."
+  document:
+    required: false
+    type: string
+    description: "Document"
+  external_url:
+    required: false
+    type: string
+    description: "External url"
+  document_type:
+    required: false
+    type: string
+    description: "* `diagram` - Network Diagram
+* `manual` - Manual
+* `purchaseorder` - Purchase Order
+* `quote` - Quote
+* `supportcontract` - Support Contract
+* `other` - Other"
+  device:
+    required: false
+    type: integer
+    description: "Device"
+  comments:
+    required: false
+    type: string
+    description: "Comments"
+  tags:
+    required: false
+    type: array
+    description: "Array of tag strings"
+  custom_fields:
+    required: false
+    type: object
+    description: "Custom fields"
+runner_type: python-script

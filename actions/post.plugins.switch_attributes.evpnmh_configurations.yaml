@@ -1,0 +1,36 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 3.7
+description: "Post a list of EVPN-MH Configuration objects."
+enabled: true
+entry_point: run.py
+name: post.plugins.switch_attributes.evpnmh_configurations
+parameters:
+  endpoint_uri:
+    default: "/plugins/switch-attributes/evpnmh-configurations/"
+    immutable: true
+    type: string
+  http_verb:
+    default: post
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  device:
+    required: false
+    type: integer
+    description: "Device"
+  switch_attributes:
+    required: false
+    type: integer
+    description: "Select the Device for which this EVPN-MH configuration will be attached."
+  systemmac:
+    required: false
+    type: integer
+    description: "System MAC"
+  df_preference:
+    required: false
+    type: integer
+    description: "Df preference"
+runner_type: python-script
