@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Defines the view set for the django ACLStandardRule model &amp; associates it to a view."
 enabled: true
 entry_point: run.py

@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Get a list of BGP Peer Address Family objects."
 enabled: true
 entry_point: run.py
@@ -88,7 +88,10 @@ parameters:
   default_originate:
     required: false
     type: boolean
-    description: "Originate a default route to this Peer / Peergroup"
+    description: "Originate a default route to this Peer / Peergroup
+
+* `True` - Yes
+* `False` - No"
   default_originate__n:
     required: false
     type: boolean
@@ -112,7 +115,10 @@ parameters:
   enable:
     required: false
     type: boolean
-    description: "Enable Address Family for this Peer / Peergroup"
+    description: "Enable Address Family for this Peer / Peergroup
+
+* `True` - Yes
+* `False` - No"
   enable__n:
     required: false
     type: boolean
@@ -120,7 +126,9 @@ parameters:
   family:
     required: false
     type: string
-    description: "Family"
+    description: "* `ipv4-unicast` - IPv4 Unicast
+* `ipv6-unicast` - IPv6 Unicast
+* `l2vpn-evpn` - L2VPN EVPN"
   family__n:
     required: false
     type: string
@@ -236,7 +244,10 @@ parameters:
   route_reflector_client:
     required: false
     type: boolean
-    description: "Peer is a Route Reflector Client"
+    description: "Peer is a Route Reflector Client
+
+* `True` - Yes
+* `False` - No"
   route_reflector_client__n:
     required: false
     type: boolean
@@ -244,7 +255,10 @@ parameters:
   route_reflector_server_client:
     required: false
     type: boolean
-    description: "Peer is a Route Reflector Server"
+    description: "Peer is a Route Reflector Server
+
+* `True` - Yes
+* `False` - No"
   route_reflector_server_client__n:
     required: false
     type: boolean
@@ -252,7 +266,10 @@ parameters:
   soft_reconfiguration:
     required: false
     type: boolean
-    description: "Enable Soft Reconfiguration on this Peer / Peergroup"
+    description: "Enable Soft Reconfiguration on this Peer / Peergroup
+
+* `True` - Yes
+* `False` - No"
   soft_reconfiguration__n:
     required: false
     type: boolean

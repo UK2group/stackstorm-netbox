@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Get a list of BGP Address Family Redistribution objects."
 enabled: true
 entry_point: run.py
@@ -68,7 +68,10 @@ parameters:
   enable:
     required: false
     type: boolean
-    description: "Enable redistribution of this protocol."
+    description: "Enable redistribution of this protocol.
+
+* `True` - Yes
+* `False` - No"
   enable__n:
     required: false
     type: boolean
@@ -128,7 +131,8 @@ parameters:
   protocol:
     required: false
     type: string
-    description: "Protocol"
+    description: "* `connected` - Connected
+* `static` - Static"
   protocol__n:
     required: false
     type: string

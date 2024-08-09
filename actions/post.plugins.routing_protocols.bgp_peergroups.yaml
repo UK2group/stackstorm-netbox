@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Post a list of BGP Peergroup objects."
 enabled: true
 entry_point: run.py
@@ -23,11 +23,11 @@ parameters:
     description: "Name of the Peergroup"
   device:
     required: false
-    type: integer
+    type: object
     description: "Device"
   vrf:
     required: false
-    type: integer
+    type: object
     description: "Vrf"
   bgprouter:
     required: false
@@ -40,7 +40,7 @@ parameters:
 * `False` - No"
   remote_as:
     required: false
-    type: integer
+    type: object
     description: "Remote as"
   bfd:
     required: false

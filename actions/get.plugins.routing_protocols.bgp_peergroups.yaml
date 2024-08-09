@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Get a list of BGP Peergroup objects."
 enabled: true
 entry_point: run.py
@@ -20,7 +20,8 @@ parameters:
   bfd:
     required: false
     type: boolean
-    description: "Bfd"
+    description: "* `True` - Yes
+* `False` - No"
   bfd__n:
     required: false
     type: boolean
@@ -128,7 +129,10 @@ parameters:
   ebgp_multihop:
     required: false
     type: boolean
-    description: "Enable eBGP Multihop"
+    description: "Enable eBGP Multihop
+
+* `True` - Yes
+* `False` - No"
   ebgp_multihop__n:
     required: false
     type: boolean
@@ -164,7 +168,8 @@ parameters:
   enable:
     required: false
     type: boolean
-    description: "Enable"
+    description: "* `True` - Yes
+* `False` - No"
   enable__n:
     required: false
     type: boolean

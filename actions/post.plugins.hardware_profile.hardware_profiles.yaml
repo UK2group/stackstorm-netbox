@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Accept a raw profile and attempt to store it.
 Succeeds if:
 - The macs match a primary interface
@@ -24,7 +24,7 @@ parameters:
     type: boolean
   device:
     required: false
-    type: integer
+    type: object
     description: "Device"
   raw_profile:
     required: false

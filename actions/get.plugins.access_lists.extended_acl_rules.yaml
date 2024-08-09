@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Defines the view set for the django ACLExtendedRule model &amp; associates it to a view."
 enabled: true
 entry_point: run.py
@@ -28,7 +28,9 @@ parameters:
   action:
     required: false
     type: string
-    description: "Action"
+    description: "* `deny` - Deny
+* `permit` - Permit
+* `remark` - Remark"
   action__n:
     required: false
     type: string
@@ -168,7 +170,9 @@ parameters:
   protocol:
     required: false
     type: string
-    description: "Protocol"
+    description: "* `icmp` - ICMP
+* `tcp` - TCP
+* `udp` - UDP"
   protocol__n:
     required: false
     type: string

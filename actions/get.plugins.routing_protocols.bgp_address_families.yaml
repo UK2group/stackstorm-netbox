@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Get a list of BGP Address Family objects."
 enabled: true
 entry_point: run.py
@@ -92,7 +92,10 @@ parameters:
   enable:
     required: false
     type: boolean
-    description: "Enable the Address Family."
+    description: "Enable the Address Family.
+
+* `True` - Yes
+* `False` - No"
   enable__n:
     required: false
     type: boolean
@@ -100,7 +103,10 @@ parameters:
   export_to_evpn:
     required: false
     type: boolean
-    description: "Export routes to EVPN L3VNI if configured."
+    description: "Export routes to EVPN L3VNI if configured.
+
+* `True` - Yes
+* `False` - No"
   export_to_evpn__n:
     required: false
     type: boolean
@@ -108,7 +114,9 @@ parameters:
   family:
     required: false
     type: string
-    description: "Family"
+    description: "* `ipv4-unicast` - IPv4 Unicast
+* `ipv6-unicast` - IPv6 Unicast
+* `l2vpn-evpn` - L2VPN EVPN"
   family__n:
     required: false
     type: string

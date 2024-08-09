@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Get a list of Device Type Document objects."
 enabled: true
 entry_point: run.py
@@ -60,7 +60,12 @@ parameters:
   document_type:
     required: false
     type: string
-    description: "Document_type"
+    description: "* `diagram` - Network Diagram
+* `manual` - Manual
+* `purchaseorder` - Purchase Order
+* `quote` - Quote
+* `supportcontract` - Support Contract
+* `other` - Other"
   document_type__n:
     required: false
     type: string

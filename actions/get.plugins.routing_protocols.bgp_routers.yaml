@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Get a list of BGP Router objects."
 enabled: true
 entry_point: run.py
@@ -36,7 +36,10 @@ parameters:
   aspath_ignore:
     required: false
     type: boolean
-    description: "Enable AS Path Ignore."
+    description: "Enable AS Path Ignore.
+
+* `True` - Yes
+* `False` - No"
   aspath_ignore__n:
     required: false
     type: boolean
@@ -92,7 +95,10 @@ parameters:
   enable:
     required: false
     type: boolean
-    description: "Enable BGP."
+    description: "Enable BGP.
+
+* `True` - Yes
+* `False` - No"
   enable__n:
     required: false
     type: boolean
@@ -100,7 +106,10 @@ parameters:
   enable_evpn:
     required: false
     type: boolean
-    description: "Enable the EVPN L3VNI for this BGP router if configured on the VRF."
+    description: "Enable the EVPN L3VNI for this BGP router if configured on the VRF.
+
+* `True` - Yes
+* `False` - No"
   enable_evpn__n:
     required: false
     type: boolean
@@ -156,7 +165,10 @@ parameters:
   route_relefection:
     required: false
     type: boolean
-    description: "Enable iBGP Route Reflection."
+    description: "Enable iBGP Route Reflection.
+
+* `True` - Yes
+* `False` - No"
   route_relefection__n:
     required: false
     type: boolean

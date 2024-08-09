@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Get a list of device objects."
 enabled: true
 entry_point: run.py
@@ -81,6 +81,22 @@ parameters:
     required: false
     type: integer
     description: "Clock_speed"
+  cluster_group:
+    required: false
+    type: array
+    description: "Cluster group (slug)"
+  cluster_group__n:
+    required: false
+    type: array
+    description: "Cluster_group not equal to"
+  cluster_group_id:
+    required: false
+    type: array
+    description: "Cluster group (ID)"
+  cluster_group_id__n:
+    required: false
+    type: array
+    description: "Cluster_group_id not equal to"
   cluster_id:
     required: false
     type: array
@@ -213,6 +229,10 @@ parameters:
     required: false
     type: boolean
     description: "Has a primary IP"
+  has_virtual_device_context:
+    required: false
+    type: boolean
+    description: "Has virtual device context"
   hdd:
     required: false
     type: integer
@@ -429,6 +449,14 @@ parameters:
     required: false
     type: array
     description: "Oob_ip_id not equal to"
+  parent_bay_id:
+    required: false
+    type: array
+    description: "Parent bay (ID)"
+  parent_bay_id__n:
+    required: false
+    type: array
+    description: "Parent_bay_id not equal to"
   parent_device_id:
     required: false
     type: array

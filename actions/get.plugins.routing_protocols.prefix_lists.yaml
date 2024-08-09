@@ -1,5 +1,5 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.7
+# NetBox API version: 4.0
 description: "Get a list of prefix list objects."
 enabled: true
 entry_point: run.py
@@ -20,7 +20,8 @@ parameters:
   address_family:
     required: false
     type: integer
-    description: "Address_family"
+    description: "* `4` - IPv4 Unicast
+* `6` - IPv6 Unicast"
   address_family__n:
     required: false
     type: integer
