@@ -1,5 +1,9 @@
 # Change Log
 
+## 3.5.0
+
+- Updated spec as per v4.0.8
+
 ## 3.4.1
 
 - Updated spec as per v3.7.3
