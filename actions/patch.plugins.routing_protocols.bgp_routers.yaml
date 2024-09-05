@@ -1,0 +1,62 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 4.0
+description: "Patch a BGP Router object."
+enabled: true
+entry_point: run.py
+name: patch.plugins.routing_protocols.bgp_routers
+parameters:
+  endpoint_uri:
+    default: "/plugins/routing-protocols/bgp-routers/{{ id }}/"
+    immutable: true
+    type: string
+  http_verb:
+    default: patch
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  device:
+    required: false
+    type: object
+    description: "Device"
+  vrf:
+    required: false
+    type: object
+    description: "Vrf"
+  enable:
+    required: false
+    type: boolean
+    description: "Enable BGP.
+
+* `True` - Yes
+* `False` - No"
+  asn:
+    required: false
+    type: object
+    description: "Asn"
+  router_id:
+    required: false
+    type: object
+    description: "Router id"
+  aspath_ignore:
+    required: false
+    type: boolean
+    description: "AS Path Ignore"
+  route_relefection:
+    required: false
+    type: boolean
+    description: "Route Reflection"
+  enable_evpn:
+    required: false
+    type: boolean
+    description: "Enable the EVPN L3VNI for this BGP router if configured on the VRF.
+
+* `True` - Yes
+* `False` - No"
+  id:
+    required: true
+    type: integer
+    description: "ID of the object to patch."
+runner_type: python-script

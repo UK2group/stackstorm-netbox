@@ -15,9 +15,11 @@ class NetboxHTTPAction(NetboxBaseAction):
         if http_verb == 'get':
             if kwargs.get('id', False) and get_detail_route_eligible:
                 # modify the `endpoint_uri` to use the detail route
-                endpoint_uri = '{}{}/'.format(endpoint_uri, str(kwargs.pop('id')))
+                endpoint_uri = '{}{}/'.format(endpoint_uri,
+                                              str(kwargs.pop('id')))
                 self.logger.debug(
-                    'endpoint_uri transformed to {} because id was passed'.format(endpoint_uri)
+                    'endpoint_uri transformed to {} because id was passed'.format(
+                        endpoint_uri)
                 )
 
             if kwargs.get('save_in_key_store') and not kwargs.get('save_in_key_store_key_name'):

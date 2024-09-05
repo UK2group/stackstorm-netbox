@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.1
-description: "POST Route Targets"
+# NetBox API version: 4.0
+description: "Post a list of route target objects."
 enabled: true
 entry_point: run.py
 name: post.ipam.route_targets
@@ -18,17 +18,21 @@ parameters:
     immutable: true
     type: boolean
   name:
-    required: true
+    required: false
     type: string
-    description: "Name"
+    description: "Route target value (formatted in accordance with RFC 4360)"
   tenant:
     required: false
-    type: integer
+    type: object
     description: "Tenant"
   description:
     required: false
     type: string
     description: "Description"
+  comments:
+    required: false
+    type: string
+    description: "Comments"
   tags:
     required: false
     type: array

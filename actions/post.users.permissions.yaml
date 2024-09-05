@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.1
-description: "POST Permissions"
+# NetBox API version: 4.0
+description: "Post a list of permission objects."
 enabled: true
 entry_point: run.py
 name: post.users.permissions
@@ -18,7 +18,7 @@ parameters:
     immutable: true
     type: boolean
   name:
-    required: true
+    required: false
     type: string
     description: "Name"
   description:
@@ -30,9 +30,17 @@ parameters:
     type: boolean
     description: "Enabled"
   object_types:
-    required: true
+    required: false
     type: array
     description: "Object types"
+  actions:
+    required: false
+    type: array
+    description: "The list of actions granted by this permission"
+  constraints:
+    required: false
+    type: object
+    description: "Queryset filter matching the applicable objects of the selected type(s)"
   groups:
     required: false
     type: array
@@ -41,12 +49,4 @@ parameters:
     required: false
     type: array
     description: "Users"
-  actions:
-    required: true
-    type: array
-    description: "Actions"
-  constraints:
-    required: false
-    type: string
-    description: "Constraints"
 runner_type: python-script

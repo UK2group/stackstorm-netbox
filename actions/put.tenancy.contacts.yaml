@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.1
-description: "PUT Contacts"
+# NetBox API version: 4.0
+description: "Put a contact object."
 enabled: true
 entry_point: run.py
 name: put.tenancy.contacts
@@ -17,44 +17,16 @@ parameters:
     default: true
     immutable: true
     type: boolean
-  group:
-    required: true
-    type: integer
-    description: "Group"
   name:
-    required: true
+    required: false
     type: string
     description: "Name"
-  title:
+  description:
     required: false
     type: string
-    description: "Title"
-  phone:
-    required: false
-    type: string
-    description: "Phone"
-  email:
-    required: false
-    type: string
-    description: "Email"
-  address:
-    required: false
-    type: string
-    description: "Address"
-  comments:
-    required: false
-    type: string
-    description: "Comments"
-  tags:
-    required: false
-    type: array
-    description: "Array of tag strings"
-  custom_fields:
-    required: false
-    type: object
-    description: "Custom fields"
+    description: "Description"
   id:
     required: true
-    type: string
+    type: integer
     description: "ID of the object to put."
 runner_type: python-script

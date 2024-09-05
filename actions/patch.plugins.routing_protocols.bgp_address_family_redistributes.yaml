@@ -1,0 +1,52 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 4.0
+description: "Patch a BGP Address Family Redistribution object."
+enabled: true
+entry_point: run.py
+name: patch.plugins.routing_protocols.bgp_address_family_redistributes
+parameters:
+  endpoint_uri:
+    default: "/plugins/routing-protocols/bgp-address-family-redistributes/{{ id }}/"
+    immutable: true
+    type: string
+  http_verb:
+    default: patch
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  protocol:
+    required: false
+    type: string
+    description: "* `connected` - Connected
+* `static` - Static"
+  device:
+    required: false
+    type: object
+    description: "Device"
+  vrf:
+    required: false
+    type: object
+    description: "Vrf"
+  family:
+    required: false
+    type: integer
+    description: "Address Family"
+  enable:
+    required: false
+    type: boolean
+    description: "Enable redistribution of this protocol.
+
+* `True` - Yes
+* `False` - No"
+  route_map:
+    required: false
+    type: integer
+    description: "Route map"
+  id:
+    required: true
+    type: integer
+    description: "ID of the object to patch."
+runner_type: python-script

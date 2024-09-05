@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.1
-description: "POST Aggregates"
+# NetBox API version: 4.0
+description: "Post a list of aggregate objects."
 enabled: true
 entry_point: run.py
 name: post.ipam.aggregates
@@ -18,16 +18,16 @@ parameters:
     immutable: true
     type: boolean
   prefix:
-    required: true
+    required: false
     type: string
     description: "Prefix"
   rir:
-    required: true
-    type: integer
-    description: "RIR"
+    required: false
+    type: object
+    description: "Rir"
   tenant:
     required: false
-    type: integer
+    type: object
     description: "Tenant"
   date_added:
     required: false
@@ -37,6 +37,10 @@ parameters:
     required: false
     type: string
     description: "Description"
+  comments:
+    required: false
+    type: string
+    description: "Comments"
   tags:
     required: false
     type: array

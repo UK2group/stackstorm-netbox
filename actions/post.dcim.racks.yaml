@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.1
-description: "POST Racks"
+# NetBox API version: 4.0
+description: "Post a list of rack objects."
 enabled: true
 entry_point: run.py
 name: post.dcim.racks
@@ -18,32 +18,36 @@ parameters:
     immutable: true
     type: boolean
   name:
-    required: true
+    required: false
     type: string
     description: "Name"
   facility_id:
     required: false
     type: string
-    description: "Facility ID"
+    description: "Facility id"
   site:
-    required: true
-    type: integer
+    required: false
+    type: object
     description: "Site"
   location:
-    required: true
-    type: integer
+    required: false
+    type: object
     description: "Location"
   tenant:
     required: false
-    type: integer
+    type: object
     description: "Tenant"
   status:
     required: false
     type: string
-    description: "Status"
+    description: "* `reserved` - Reserved
+* `available` - Available
+* `planned` - Planned
+* `active` - Active
+* `deprecated` - Deprecated"
   role:
     required: false
-    type: integer
+    type: object
     description: "Role"
   serial:
     required: false
@@ -52,19 +56,49 @@ parameters:
   asset_tag:
     required: false
     type: string
-    description: "Asset tag"
+    description: "A unique tag used to identify this rack"
   type:
     required: false
     type: string
-    description: "Type"
+    description: "* `2-post-frame` - 2-post frame
+* `4-post-frame` - 4-post frame
+* `4-post-cabinet` - 4-post cabinet
+* `wall-frame` - Wall-mounted frame
+* `wall-frame-vertical` - Wall-mounted frame (vertical)
+* `wall-cabinet` - Wall-mounted cabinet
+* `wall-cabinet-vertical` - Wall-mounted cabinet (vertical)"
   width:
     required: false
     type: integer
-    description: "Width"
+    description: "Rail-to-rail width
+
+* `10` - 10 inches
+* `19` - 19 inches
+* `21` - 21 inches
+* `23` - 23 inches"
   u_height:
     required: false
     type: integer
     description: "Height (U)"
+  starting_unit:
+    required: false
+    type: integer
+    description: "Starting unit for rack"
+  weight:
+    required: false
+    type: integer
+    description: "Weight"
+  max_weight:
+    required: false
+    type: integer
+    description: "Maximum load capacity for the rack"
+  weight_unit:
+    required: false
+    type: string
+    description: "* `kg` - Kilograms
+* `g` - Grams
+* `lb` - Pounds
+* `oz` - Ounces"
   desc_units:
     required: false
     type: boolean
@@ -72,15 +106,24 @@ parameters:
   outer_width:
     required: false
     type: integer
-    description: "Outer width"
+    description: "Outer dimension of rack (width)"
   outer_depth:
     required: false
     type: integer
-    description: "Outer depth"
+    description: "Outer dimension of rack (depth)"
   outer_unit:
     required: false
     type: string
-    description: "Outer unit"
+    description: "* `mm` - Millimeters
+* `in` - Inches"
+  mounting_depth:
+    required: false
+    type: integer
+    description: "Maximum depth of a mounted device, in millimeters. For four-post racks, this is the distance between the front and rear rails."
+  description:
+    required: false
+    type: string
+    description: "Description"
   comments:
     required: false
     type: string

@@ -1,0 +1,60 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 4.0
+description: "Put a Switch Attribute object."
+enabled: true
+entry_point: run.py
+name: put.plugins.switch_attributes.switch_attributes
+parameters:
+  endpoint_uri:
+    default: "/plugins/switch-attributes/switch-attributes/{{ id }}/"
+    immutable: true
+    type: string
+  http_verb:
+    default: put
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  device:
+    required: false
+    type: object
+    description: "Device"
+  cp_acl:
+    required: false
+    type: object
+    description: "Cp acl"
+  asn:
+    required: false
+    type: object
+    description: "Asn"
+  router_id:
+    required: false
+    type: object
+    description: "Router id"
+  vtep_address:
+    required: false
+    type: object
+    description: "Vtep address"
+  evpn_enabled:
+    required: false
+    type: boolean
+    description: "Enable EVPN"
+  anycast_vtep_address:
+    required: false
+    type: object
+    description: "Anycast vtep address"
+  mlag_enabled:
+    required: false
+    type: boolean
+    description: "Enable MLAG"
+  evpn_mh_enabled:
+    required: false
+    type: boolean
+    description: "Enable EVPN-MH"
+  id:
+    required: true
+    type: integer
+    description: "ID of the object to put."
+runner_type: python-script

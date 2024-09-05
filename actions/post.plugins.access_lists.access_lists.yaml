@@ -1,0 +1,55 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 4.0
+description: "Defines the view set for the django AccessList model &amp; associates it to a view."
+enabled: true
+entry_point: run.py
+name: post.plugins.access_lists.access_lists
+parameters:
+  endpoint_uri:
+    default: "/plugins/access-lists/access-lists/"
+    immutable: true
+    type: string
+  http_verb:
+    default: post
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  name:
+    required: false
+    type: string
+    description: "Name"
+  assigned_object_type:
+    required: false
+    type: string
+    description: "Assigned object type"
+  assigned_object_id:
+    required: false
+    type: integer
+    description: "Assigned object id"
+  type:
+    required: false
+    type: string
+    description: "* `extended` - Extended
+* `standard` - Standard"
+  default_action:
+    required: false
+    type: string
+    description: "* `deny` - Deny
+* `permit` - Permit
+* `reject` - Reject (Reset)"
+  comments:
+    required: false
+    type: string
+    description: "Comments"
+  tags:
+    required: false
+    type: array
+    description: "Array of tag strings"
+  custom_fields:
+    required: false
+    type: object
+    description: "Custom fields"
+runner_type: python-script

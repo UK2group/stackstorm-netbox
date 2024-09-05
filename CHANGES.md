@@ -1,5 +1,37 @@
 # Change Log
 
+## 3.5.0
+
+- Updated spec as per v4.0.8
+
+## 3.4.1
+
+- Updated spec as per v3.7.3
+
+## 3.4.0
+
+- Updated spec as per v3.7.1
+
+## 3.3.0
+
+- Updated spec as per v3.6.9
+
+## 3.2.0
+
+- Update spec as per v3.5.9
+
+## 3.1.0
+
+- Updated spec as per v3.4.7
+
+## 3.0.7
+
+- Add @abhi1693 as code owner.
+
+## 3.0.6
+
+- Add exceptions on action.py
+
 ## 3.0.5
 
 - Bug fix: Tags fields need additional translation when modifying 
@@ -78,4 +110,3 @@
 
 ## 0.1.0
 - First release
-

@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.1
-description: "POST Inventory Items"
+# NetBox API version: 4.0
+description: "Post a list of inventory item objects."
 enabled: true
 entry_point: run.py
 name: post.dcim.inventory_items
@@ -18,29 +18,33 @@ parameters:
     immutable: true
     type: boolean
   device:
-    required: true
-    type: integer
+    required: false
+    type: object
     description: "Device"
   parent:
     required: false
     type: integer
     description: "Parent"
   name:
-    required: true
+    required: false
     type: string
     description: "Name"
   label:
     required: false
     type: string
-    description: "Label"
+    description: "Physical label"
+  role:
+    required: false
+    type: object
+    description: "Role"
   manufacturer:
     required: false
-    type: integer
+    type: object
     description: "Manufacturer"
   part_id:
     required: false
     type: string
-    description: "Part ID"
+    description: "Manufacturer-assigned part identifier"
   serial:
     required: false
     type: string
@@ -48,15 +52,23 @@ parameters:
   asset_tag:
     required: false
     type: string
-    description: "Asset tag"
+    description: "A unique tag used to identify this item"
   discovered:
     required: false
     type: boolean
-    description: "Discovered"
+    description: "This item was automatically discovered"
   description:
     required: false
     type: string
     description: "Description"
+  component_type:
+    required: false
+    type: string
+    description: "Component type"
+  component_id:
+    required: false
+    type: integer
+    description: "Component id"
   tags:
     required: false
     type: array

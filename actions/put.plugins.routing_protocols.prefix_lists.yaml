@@ -1,0 +1,41 @@
+# This action was auto generated from the NetBox API Swagger Spec
+# NetBox API version: 4.0
+description: "Put a prefix list object."
+enabled: true
+entry_point: run.py
+name: put.plugins.routing_protocols.prefix_lists
+parameters:
+  endpoint_uri:
+    default: "/plugins/routing-protocols/prefix-lists/{{ id }}/"
+    immutable: true
+    type: string
+  http_verb:
+    default: put
+    immutable: true
+    type: string
+  get_detail_route_eligible:
+    default: true
+    immutable: true
+    type: boolean
+  name:
+    required: false
+    type: string
+    description: "Name"
+  device:
+    required: false
+    type: object
+    description: "Device"
+  address_family:
+    required: false
+    type: integer
+    description: "* `4` - IPv4 Unicast
+* `6` - IPv6 Unicast"
+  rules:
+    required: false
+    type: array
+    description: "Rules"
+  id:
+    required: true
+    type: integer
+    description: "ID of the object to put."
+runner_type: python-script

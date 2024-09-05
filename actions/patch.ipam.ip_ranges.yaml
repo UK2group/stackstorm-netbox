@@ -1,6 +1,6 @@
 # This action was auto generated from the NetBox API Swagger Spec
-# NetBox API version: 3.1
-description: "PATCH Ip Ranges"
+# NetBox API version: 4.0
+description: "Patch a IP range object."
 enabled: true
 entry_point: run.py
 name: patch.ipam.ip_ranges
@@ -18,33 +18,41 @@ parameters:
     immutable: true
     type: boolean
   start_address:
-    required: true
+    required: false
     type: string
     description: "Start address"
   end_address:
-    required: true
+    required: false
     type: string
     description: "End address"
   vrf:
     required: false
-    type: integer
-    description: "VRF"
+    type: object
+    description: "Vrf"
   tenant:
     required: false
-    type: integer
+    type: object
     description: "Tenant"
   status:
     required: false
     type: string
-    description: "Status"
+    description: "Operational status of this range
+
+* `active` - Active
+* `reserved` - Reserved
+* `deprecated` - Deprecated"
   role:
     required: false
-    type: integer
+    type: object
     description: "Role"
   description:
     required: false
     type: string
     description: "Description"
+  comments:
+    required: false
+    type: string
+    description: "Comments"
   tags:
     required: false
     type: array
@@ -53,8 +61,12 @@ parameters:
     required: false
     type: object
     description: "Custom fields"
+  mark_utilized:
+    required: false
+    type: boolean
+    description: "Treat as fully utilized"
   id:
     required: true
-    type: string
+    type: integer
     description: "ID of the object to patch."
 runner_type: python-script
